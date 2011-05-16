@@ -6,9 +6,15 @@ Installs Tunnelblick
 Requirements
 ============
 
-Only works on Mac OS X.
+## Platform
 
-Requires an OpenVPN server somewhere. Set one up with http://ckbk.it/openvpn.
+* Mac OS X.
+
+## Cookbooks
+
+* dmg
+
+Requires an OpenVPN server somewhere. You can set one up with http://ckbk.it/openvpn.
 
 Attributes
 ==========
@@ -25,7 +31,7 @@ Put the tunnelblick recipe in the run list and have you some OpenVPN.
 License and Author
 ==================
 
-Copyright 2010, Joshua Timberman (<joshua@housepub.org>)
+Copyright 2010, Joshua Timberman (<cookbooks@housepub.org>)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

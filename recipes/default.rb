@@ -17,32 +17,17 @@
 # limitations under the License.
 #
 
-dmg_file = "#{Chef::Config[:file_cache_path]}/Tunnelblick.dmg"
+dmg_package "Tunnelblick" do
+  source node[:tunnelblick][:url]
+  checksum node[:tunnelblick][:checksum]
+end
 
-unless ::File.directory?("/Applications/Tunnelblick.app")
-  remote_file dmg_file do
-    source node['tunnelblick']['url']
-    checksum node['tunnelblick']['checksum']
-  end
+file "/Applications/Tunnelblick.app/Contents/MacOS/Tunnelblick" do
+  mode 0755
+end
 
-  execute "hdid #{dmg_file}"
-
-  ruby_block "Install Tunnelblick" do
-    block do
-      Chef::Log.info("Installing Tunnelblick.app to /Applications")
-      ::FileUtils.cp_r("/Volumes/Tunnelblick/Tunnelblick.app", "/Applications")
-    end
-  end
-
-  execute "umount /Volumes/Tunnelblick"
-
-  file "/Applications/Tunnelblick.app/Contents/MacOS/Tunnelblick" do
+%w{installer openvpn}.each do |f|
+  file "/Applications/Tunnelblick.app/Contents/Resources/#{f}" do
     mode 0755
-  end
-
-  %w{installer openvpn}.each do |f|
-    file "/Applications/Tunnelblick.app/Contents/Resources/#{f}" do
-      mode 0755
-    end
   end
 end
