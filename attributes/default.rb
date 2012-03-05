@@ -16,6 +16,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-default["tunnelblick"]["checksum"] = "5859916a5ad94279271ea761385b8d24f782988d786e64eb60e6005e193f11f5"
-default["tunnelblick"]["version"] = "3.1.7"
+default["tunnelblick"]["checksum"] = "dba51e7b7cdf941fb0e19037b6a4f68d3038c0ebff81239b08439095943e2002"
+default["tunnelblick"]["version"] = "3.2.3"
 default["tunnelblick"]["url"] = "http://tunnelblick.googlecode.com/files/Tunnelblick_#{node['tunnelblick']['version']}.dmg"

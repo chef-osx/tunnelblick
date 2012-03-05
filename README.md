@@ -31,7 +31,7 @@ Put the tunnelblick recipe in the run list and have you some OpenVPN.
 License and Author
 ==================
 
-Copyright 2010, Joshua Timberman (<cookbooks@housepub.org>)
+Copyright 2010, Joshua Timberman (<opensource@housepub.org>)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
