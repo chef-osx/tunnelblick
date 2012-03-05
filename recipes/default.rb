@@ -29,5 +29,6 @@ end
 %w{installer openvpn}.each do |f|
   file "/Applications/Tunnelblick.app/Contents/Resources/#{f}" do
     mode 0755
+    ignore_failure true
   end
 end
