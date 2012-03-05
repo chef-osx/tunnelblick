@@ -18,8 +18,8 @@
 #
 
 dmg_package "Tunnelblick" do
-  source node[:tunnelblick][:url]
-  checksum node[:tunnelblick][:checksum]
+  source node["tunnelblick"]["url"]
+  checksum node["tunnelblick"]["checksum"]
 end
 
 file "/Applications/Tunnelblick.app/Contents/MacOS/Tunnelblick" do
