@@ -1,3 +1,7 @@
+## v1.0.7:
+
+* Update to version 3.4.3 (build 4055.4198)
+
 ## v1.0.6:
 
 * Update to version 3.2.8
